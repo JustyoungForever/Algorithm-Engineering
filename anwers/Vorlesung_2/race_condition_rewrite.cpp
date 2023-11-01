@@ -10,7 +10,7 @@ int main() {
     const double width = 1.0 / static_cast<double>(num_steps);
     const double start_time = omp_get_wtime();
     double pi = 0.0;
-    std::mutex pi_mutex; // 定义一个互斥锁
+    std::mutex pi_mutex; 
 
     #pragma omp parallel num_threads(8)
     {
@@ -21,7 +21,7 @@ int main() {
             sum_local += (4.0 / (1.0 + x * x));
         }
         
-        // 使用互斥锁保护对pi的更新
+        
         std::lock_guard<std::mutex> guard(pi_mutex);
         pi += sum_local * width;
     }
