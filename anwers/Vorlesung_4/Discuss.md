@@ -11,7 +11,7 @@ Lock-free Algorithmen gelten als wichtige Alternative zu blockierungsfreien (loc
 Darüber hinaus gibt es Begriffe wie blockierungsfrei (obstruction-free) und wartefrei (wait-free), die ähnliche Konzepte beschreiben.
 
 obstruction-free：
-'''java
+```java
 class Counter {
     private int count = 0;
     private final Object lock = new Object();
@@ -28,9 +28,9 @@ class Counter {
         }
     }
 }
-'''
+```
 Lock-free：
-'''java
+```java
 import java.util.concurrent.atomic.AtomicInteger;
 
 class Counter {
@@ -44,4 +44,4 @@ class Counter {
         return count.get();
     }
 }
-'''
+```
