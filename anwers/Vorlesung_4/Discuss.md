@@ -45,3 +45,29 @@ class Counter {
     }
 }
 ```
+Speicheranordnungen sind Regeln, die die Reihenfolge definieren, in der Speicheroperationen in einer mehrfädigen Umgebung stattfinden. 
+Sie sind in der nebenläufigen Programmierung entscheidend, 
+um Probleme wie Race Conditions zu vermeiden und um die Speicherkonsistenz über verschiedene Threads hinweg sicherzustellen.
+
+
+Sequentiell konsistent (SeqCst): Dies ist die strengste Speicheranordnung, die sicherstellt, dass Operationen in genau der Reihenfolge erscheinen, die das Programm vorgibt. Es ist so, als könnten alle Threads alle Änderungen in einer einzigen, konsistenten Reihenfolge sehen.
+
+Erwerben-Freigeben (AcqRel): Dies bietet einen Mittelweg in Bezug auf die Anordnung. Eine Erwerbsoperation stellt sicher, dass nachfolgende Lese- und Schreibvorgänge im aktuellen Thread die Effekte von Schreibvorgängen sehen, die vor der Freigabeoperation in einem anderen Thread stattfanden.
+
+Entspannt (Relaxed): Entspannte Anordnungen ermöglichen maximale Leistung und erzwingen keine Anordnungsbeschränkungen für Speicheroperationen. Dies kann verwendet werden, wenn die Ausführungsreihenfolge nicht kritisch für die Richtigkeit des Programms ist.
+
+```cpp
+std::atomic<int> counter{0};
+
+void increment() {
+    counter.fetch_add(1, std::memory_order_relaxed); // Entspannte Anordnung
+}
+
+void decrement() {
+    counter.fetch_sub(1, std::memory_order_release); // Freigabe-Anordnung
+}
+
+int get() {
+    return counter.load(std::memory_order_acquire); // Erwerbs-Anordnung
+}
+```
