@@ -1,0 +1,2 @@
+/usr/bin/ar qc libSource_lib.a CMakeFiles/Source_lib.dir/blur.c.o CMakeFiles/Source_lib.dir/kmeans.c.o CMakeFiles/Source_lib.dir/libimagequant.c.o CMakeFiles/Source_lib.dir/mediancut.c.o CMakeFiles/Source_lib.dir/mempool.c.o CMakeFiles/Source_lib.dir/nearest.c.o CMakeFiles/Source_lib.dir/pam.c.o
+/usr/bin/ranlib libSource_lib.a
