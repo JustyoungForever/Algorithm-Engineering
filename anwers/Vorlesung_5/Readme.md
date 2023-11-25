@@ -22,3 +22,12 @@ file(GLOB QUANTIZE_HEADERS "*.h")
 ```
 
 I ran the generated program, and the file size of the resulting image was reduced compared to the original image.
+
+
+And about Catch2, I received a success:
+```
+pzy@LAPTOP-QSQ08ER3:/mnt/g/FSU_Cloud/algorithm_engineering/Zhiyuan_Pan_Algorithm-Engineering/anwers/Vorlesung_5/test_with_catch2/build/catch$ ./fizzbuzz_tests
+===============================================================================
+All tests passed (68 assertions in 3 test cases)
+
+```
