@@ -10,5 +10,3 @@ When using `#pragma omp simd` for loop vectorization in OpenMP, various clauses 
 
 ### private Clause
 - The `private` clause declares that certain variables in the loop are private, meaning each thread or vector unit has its own independent copy of the variable. This is important in parallel computing to prevent data conflicts and race conditions among different threads.
-
-These clauses provide increased control over the compiler's vectorization behavior, contributing to improved performance and correctness of the code.
