@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cmath>
 
-const int ITERATIONS = 10;  // 可以增加迭代次数以获得更高的精度
+const int ITERATIONS = 10;  
 
 int main() {
     double innerPolygonHalfPerimeter = 3.0; 
