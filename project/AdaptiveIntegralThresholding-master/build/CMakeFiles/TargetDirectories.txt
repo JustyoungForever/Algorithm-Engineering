@@ -1,0 +1,3 @@
+/mnt/g/FSU_Cloud/algorithm_engineering/Zhiyuan_Pan_Algorithm-Engineering/project/AdaptiveIntegralThresholding-master/build/CMakeFiles/adaptiveThreshold_exe.dir
+/mnt/g/FSU_Cloud/algorithm_engineering/Zhiyuan_Pan_Algorithm-Engineering/project/AdaptiveIntegralThresholding-master/build/CMakeFiles/edit_cache.dir
+/mnt/g/FSU_Cloud/algorithm_engineering/Zhiyuan_Pan_Algorithm-Engineering/project/AdaptiveIntegralThresholding-master/build/CMakeFiles/rebuild_cache.dir
