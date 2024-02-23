@@ -1,28 +1,24 @@
-# cmake needs this line
-cmake_minimum_required(VERSION 2.8)
+cmake_minimum_required(VERSION 3.10)
 
-add_definitions(-std=c++11)
+# Set the project name
+project(ThresholdProject)
 
-# Define project name
-project(adaptiveThreshold)
-
-# Find OpenCV, you may need to set OpenCV_DIR variable
-# to the absolute path to the directory containing OpenCVConfig.cmake file
-# via the command line or GUI
+# Find the OpenCV package
 find_package(OpenCV REQUIRED)
 
-# If the package has been found, several variables will
-# be set, you can find the full list with descriptions
-# in the OpenCVConfig.cmake file.
-# Print some message showing some of them
-message(STATUS "OpenCV library status:")
-message(STATUS "    version: ${OpenCV_VERSION}")
-message(STATUS "    libraries: ${OpenCV_LIBS}")
-message(STATUS "    include path: ${OpenCV_INCLUDE_DIRS}")
+# Find the OpenMP package
+find_package(OpenMP REQUIRED)
 
+# Include directories for OpenCV
+include_directories(${OpenCV_INCLUDE_DIRS})
 
-# Declare the executable target built from your sources
-add_executable(adaptiveThreshold_exe main.cpp)
+# Add the executable for the main application
+add_executable(ThresholdApp main.cpp ThresholdMethods.cpp)
 
-# Link your application with OpenCV libraries
-target_link_libraries(adaptiveThreshold_exe ${OpenCV_LIBS})
+# Link the OpenCV libraries to the executable
+target_link_libraries(ThresholdApp ${OpenCV_LIBS})
+
+# If OpenMP was found, link it to the target
+if(OpenMP_CXX_FOUND)
+    target_link_libraries(ThresholdApp OpenMP::OpenMP_CXX)
+endif()

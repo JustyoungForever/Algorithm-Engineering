@@ -117,24 +117,48 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named adaptiveThreshold_exe
+# Target rules for targets named ThresholdApp
 
 # Build rule for target.
-adaptiveThreshold_exe: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 adaptiveThreshold_exe
-.PHONY : adaptiveThreshold_exe
+ThresholdApp: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ThresholdApp
+.PHONY : ThresholdApp
 
 # fast build rule for target.
-adaptiveThreshold_exe/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/adaptiveThreshold_exe.dir/build.make CMakeFiles/adaptiveThreshold_exe.dir/build
-.PHONY : adaptiveThreshold_exe/fast
+ThresholdApp/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ThresholdApp.dir/build.make CMakeFiles/ThresholdApp.dir/build
+.PHONY : ThresholdApp/fast
+
+ThresholdMethods.o: ThresholdMethods.cpp.o
+.PHONY : ThresholdMethods.o
+
+# target to build an object file
+ThresholdMethods.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ThresholdApp.dir/build.make CMakeFiles/ThresholdApp.dir/ThresholdMethods.cpp.o
+.PHONY : ThresholdMethods.cpp.o
+
+ThresholdMethods.i: ThresholdMethods.cpp.i
+.PHONY : ThresholdMethods.i
+
+# target to preprocess a source file
+ThresholdMethods.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ThresholdApp.dir/build.make CMakeFiles/ThresholdApp.dir/ThresholdMethods.cpp.i
+.PHONY : ThresholdMethods.cpp.i
+
+ThresholdMethods.s: ThresholdMethods.cpp.s
+.PHONY : ThresholdMethods.s
+
+# target to generate assembly for a file
+ThresholdMethods.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ThresholdApp.dir/build.make CMakeFiles/ThresholdApp.dir/ThresholdMethods.cpp.s
+.PHONY : ThresholdMethods.cpp.s
 
 main.o: main.cpp.o
 .PHONY : main.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/adaptiveThreshold_exe.dir/build.make CMakeFiles/adaptiveThreshold_exe.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ThresholdApp.dir/build.make CMakeFiles/ThresholdApp.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -142,7 +166,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/adaptiveThreshold_exe.dir/build.make CMakeFiles/adaptiveThreshold_exe.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ThresholdApp.dir/build.make CMakeFiles/ThresholdApp.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -150,7 +174,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/adaptiveThreshold_exe.dir/build.make CMakeFiles/adaptiveThreshold_exe.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ThresholdApp.dir/build.make CMakeFiles/ThresholdApp.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -161,7 +185,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... adaptiveThreshold_exe"
+	@echo "... ThresholdApp"
+	@echo "... ThresholdMethods.o"
+	@echo "... ThresholdMethods.i"
+	@echo "... ThresholdMethods.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
