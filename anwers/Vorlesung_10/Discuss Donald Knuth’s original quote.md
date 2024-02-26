@@ -1,0 +1,5 @@
+* Knuths Ausführungen betonen die Wichtigkeit angemessener Optimierungen in der Softwareentwicklung, nämlich die Vermeidung vorzeitiger Optimierung in den meisten Fällen, ohne dabei die Chance zu verpassen, kritischen Code sorgfältig zu optimieren. Mit Hilfe von tatsächlichen Messungen und Werkzeugen können Entwickler jene Teile des Programms genauer identifizieren und optimieren, die die Leistung tatsächlich beeinflussen.
+
+* Zugleich habe ich in meinem Projekt ähnliche Erfahrungen gemacht. Als ich anfangs das Programm schrieb, entschied ich mich, aktiv OpenMP zur Optimierung einiger Schleifen zu verwenden, aber in der Praxis führte dies nicht zu einer Effizienzsteigerung, sondern verursachte einige Bugs. Nachdem ich die gesamte Logik des Programms fertiggestellt hatte und kontinuierlich debuggte, um OpenMP erneut und optimierter einzusetzen, war das Ergebnis viel besser als die anfängliche Optimierung. Daher hat dieser Abschnitt meine Debugging-Erfahrung deutlich verbessert, und ich werde auch in Zukunft diesem Prozess folgen, um die Optimierungseffizienz zu steigern.
+
+
